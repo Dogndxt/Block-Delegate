@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KL3-L7-4n3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAc-aD-wGV" customClass="YQLButton">
+                                <rect key="frame" x="142.5" y="203.5" width="90" height="60"/>
+                                <color key="backgroundColor" red="0.60129659349999998" green="0.59081890020000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4Ca-7q-95C"/>
+                                    <constraint firstAttribute="width" constant="90" id="57K-mQ-eNI"/>
+                                </constraints>
+                                <state key="normal" title="delegate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5m-2G-DPK" customClass="YQLButton">
+                                <rect key="frame" x="142.5" y="353.5" width="90" height="60"/>
+                                <color key="backgroundColor" red="0.60129659349999998" green="0.59081890020000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="15i-Og-RXh"/>
+                                    <constraint firstAttribute="height" constant="60" id="hdK-hj-2AK"/>
+                                </constraints>
+                                <state key="normal" title="block">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1t-hq-Kls">
+                                <rect key="frame" x="147.5" y="503.5" width="80" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="61d-8J-RLG"/>
+                                    <constraint firstAttribute="height" constant="60" id="gS1-ZF-nPP"/>
+                                </constraints>
+                                <state key="normal" title="跳转"/>
+                                <connections>
+                                    <action selector="pushToTwoVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vpl-oh-vcA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iAc-aD-wGV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4NZ-5L-w0d"/>
+                            <constraint firstItem="l5m-2G-DPK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="82Y-ZH-Ohf"/>
+                            <constraint firstItem="j1t-hq-Kls" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="200" id="BMa-4M-XR3"/>
+                            <constraint firstItem="l5m-2G-DPK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="Z2R-DH-TYI"/>
+                            <constraint firstItem="j1t-hq-Kls" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nkI-Xx-peO"/>
+                            <constraint firstItem="iAc-aD-wGV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="qCV-mg-Cbr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BcM-a4-iLg"/>
+                    <connections>
+                        <outlet property="blockBtn" destination="l5m-2G-DPK" id="kGC-Bu-eIw"/>
+                        <outlet property="delegateBtn" destination="iAc-aD-wGV" id="JWF-j9-rny"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="164"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="95I-J8-fcn">
+            <objects>
+                <navigationController id="KL3-L7-4n3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SsP-s6-ocf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vpL-GD-4Mg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uga-Ab-Jn0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-169" y="163"/>
+        </scene>
+        <!--Two View Controller-->
+        <scene sceneID="3W0-VP-sxg">
+            <objects>
+                <viewController storyboardIdentifier="TwoViewController" id="oUS-55-Eax" customClass="TwoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mrc-Rb-7en"/>
+                        <viewControllerLayoutGuide type="bottom" id="AE9-gp-bnh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EXs-v1-TDo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdA-Eb-GHR" customClass="YQLButton">
+                                <rect key="frame" x="143" y="204" width="90" height="60"/>
+                                <color key="backgroundColor" red="0.60129659349999998" green="0.59081890020000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="3Ku-ny-h2k"/>
+                                    <constraint firstAttribute="height" constant="60" id="CFO-VJ-xrc"/>
+                                </constraints>
+                                <state key="normal" title="delegate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edv-gz-4eQ" customClass="YQLButton">
+                                <rect key="frame" x="143" y="354" width="90" height="60"/>
+                                <color key="backgroundColor" red="0.60129659349999998" green="0.59081890020000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7OV-gc-mhQ"/>
+                                    <constraint firstAttribute="width" constant="90" id="t3j-zr-NAO"/>
+                                </constraints>
+                                <state key="normal" title="block">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Edv-gz-4eQ" firstAttribute="centerX" secondItem="EXs-v1-TDo" secondAttribute="centerX" id="1Zx-PH-bT2"/>
+                            <constraint firstItem="AdA-Eb-GHR" firstAttribute="centerY" secondItem="EXs-v1-TDo" secondAttribute="centerY" constant="-100" id="Wjh-ze-Oet"/>
+                            <constraint firstItem="AdA-Eb-GHR" firstAttribute="centerX" secondItem="EXs-v1-TDo" secondAttribute="centerX" id="ukt-Pi-uoO"/>
+                            <constraint firstItem="Edv-gz-4eQ" firstAttribute="centerY" secondItem="EXs-v1-TDo" secondAttribute="centerY" constant="50" id="wFK-8p-whD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vwT-IE-GUo"/>
+                    <connections>
+                        <outlet property="blockBtn" destination="Edv-gz-4eQ" id="Nlx-gA-vTg"/>
+                        <outlet property="delegateBtn" destination="AdA-Eb-GHR" id="nvx-oS-dS0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KWp-wg-lmY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1282" y="163"/>
+        </scene>
+    </scenes>
+</document>
